@@ -1,0 +1,38 @@
+----------------- The Entire thing is collection frame work -----------------
+
+Collection Framework includes:
+1. Collection interface
+2. Map interface
+3. Iterator interface
+
+1. Collection Interface Includes:
+
+    I   List interface (implemented by below classes)
+        -> ArrayList
+        -> LinkedList
+        -> Stack
+        -> Vector
+
+    II  Set interface (implemented by below classes)
+        -> EnumSet
+        -> HashSet
+        -> LinkedHashSet
+        -> TreeSet
+
+    III Queue interface (implemented by below classes)
+        -> ArrayDeque
+        -> LinkedList
+        -> PriorityQueue
+
+2. Map interface (implemented by below classes)
+    -> HashMap
+    -> TreeMap
+    -> EnumMap
+    -> LinkedHashMap
+    -> WeakHashMap
+
+3. Iterator interface (implemented by below classes)
+    -> ListIterator
+
+
+** all are under java.util
