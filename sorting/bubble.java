@@ -9,6 +9,33 @@ class BubbleSort
 
 
     */
+    public static void recursive_bubble(int arr[], int n){
+
+        /*
+            Time Complexity = O(N^2)
+                    O(N2) for the worst and average cases and O(N) for the best case. Here, N = size of the array.
+                    sum of n natural numbers
+            Space Complexity = O(N)
+                    O(N) auxiliary stack space.
+        */
+        if(n==1) return;
+        
+        boolean didswap = false;
+        
+        for(int i=0; i<n-1;i++){
+            if(arr[i]>arr[i+1]){
+                int tmp= arr[i];
+                arr[i]=arr[i+1];
+                arr[i+1]=tmp;
+                
+                didswap = true;
+            }
+        }
+        
+        if(!didswap) return;
+        
+        bubbleSort(arr,n-1);
+    }
     public static void bubbleSort(int arr[], int n)
     {
         for(int i=n-1; i>=1; i--){

@@ -10,6 +10,26 @@ Space  = O(1)
 */
 class InserionSort
 {
+  /*
+  Time Complexity = O(N^2) sum of n numbers best O(N)
+  Space Complexity = O(N)
+       auxiliary stack space.
+  */
+  public static void recursive_insertionSort(int arr[], int i, int n){
+    
+    if(n==1) return;
+
+    int j=i;
+
+    while(j>0 && arr[j-1]>arr[j]){
+      int t=arr[j-1;]
+      arr[j-1]=arr[j];
+      arr[j]=t;
+      j-=1;
+    }
+
+    recursive_insertionSort(arr,i+1,n);
+  }
   public void insertionSort(int arr[], int n)
   {
       for(int i=0; i<n;i++){ // traversing the array
