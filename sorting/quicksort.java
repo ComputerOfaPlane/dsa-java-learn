@@ -49,13 +49,13 @@ public class Solution {
 
             if(i<j){
                 int t=arr.get(i);
-                arr.set(arr.get(j),i);
-                arr.set(t,j);
+                arr.set(i,arr.get(j));
+                arr.set(j,t);
             }
         }
         int t=arr.get(low);
-        arr.set(arr.get(j),low);
-        arr.set(t,j);
+        arr.set(low,arr.get(j));
+        arr.set(j,t);
         return j;
     }
 }
