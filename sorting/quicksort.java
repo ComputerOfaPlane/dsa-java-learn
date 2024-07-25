@@ -1,6 +1,10 @@
 import java.util.* ;
 import java.io.*; 
+/*
+Time complexity = O(NlogN)
+Space = O(1)
 
+*/
 public class Solution {
     public static void main(String[] args) {
         List<Integer> arr = new ArrayList<>();
