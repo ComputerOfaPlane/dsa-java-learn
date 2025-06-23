@@ -1,0 +1,2 @@
+this is edge case hell for input validation, rest is pretty straight forward
+https://www.geeksforgeeks.org/dsa/recursive-implementation-of-atoi/
