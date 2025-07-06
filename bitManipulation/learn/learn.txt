@@ -1,0 +1,89 @@
+bit manipulation :)
+
+Given a 32 bit unsigned integer num and an integer i. Perform following operations on the number - 
+1. Get ith bit
+2. Set ith bit
+3. Clear ith bit
+class Solution {
+    static void bitManipulation(int num, int i) {
+        int ithbit = num>>(i-1)&1;
+        int set = num | (1<<(i-1));
+        int clear = num & ~(1<<(i-1));
+        System.out.print(ithbit + " " + set + " "+ clear);
+    }
+}
+
+Given two positive integer n and  k, check if the kth index bit of n is set or not.
+ Note: A bit is called set if it is 1. 
+class CheckBit {
+    static boolean checkKthBit(int n, int k) {
+        return (n & (1<<k)) != 0;
+    }
+}
+
+Given a positive integer n, determine whether it is odd or even. Return true if the number is even and false if the number is odd.
+class Solution {
+    static boolean isEven(int n) {
+        return (n&1)==0;
+    }
+}
+
+Given an integer n, return true if it is a power of two. Otherwise, return false.
+An integer n is a power of two, if there exists an integer x such that n == 2x.
+class Solution {
+    public boolean isPowerOfTwo(int n) {
+        if(n==0) return false;
+        if(n<0) return false;
+        return (n&(n-1))==0;
+    }
+}
+
+Count set bits
+You are given a number n. Find the total count of set bits for all numbers from 1 to n (both inclusive).
+class Solution {
+    public static int countSetBits(int n) {
+        int c = 0;
+        for(int i=1; i<=n; i++){
+            int t = i;
+            /*while(t>1){
+                c += t&1;
+                t = t>>1;
+            }
+            if(t==1) c+=1;*/
+            while(t!=0){
+                t = t&(t-1); // make the rightmost set bit zero until there are no set bits left
+                c++;
+            }
+        }
+        return c;
+    }
+}
+
+Set the rightmost unset bit
+Given a non-negative number n . The problem is to set the rightmost unset bit in the binary representation of n.
+class Solution {
+    static int setBit(int n) {
+        for(int i=0; i<32; i++){
+            if(((n>>i)&1) == 0) return (1<<i)|n;
+        }
+        return 0;
+    }
+}
+
+Swap two numbers
+You are given two numbers a and b. Your task is to swap the given two numbers.
+Note: Try to do it without a temporary variable.
+class Solution {
+    static List<Integer> get(int a, int b) {
+        a = a ^ b;
+        b = a ^ b; // basically a^b ^ b => b b cancels
+        a = a ^ b; => a^b ^ b => a^b ^ a (from prev) => a a cancels
+        List<Integer> list = new ArrayList<>();
+        list.add(a);
+        list.add(b);
+        return list;
+    }
+}
+
+toggle a bit?
+shift one to that position and do xor of the number

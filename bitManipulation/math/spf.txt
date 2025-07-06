@@ -1,0 +1,5 @@
+smallest prime factorization
+
+instead of marking cells as true or false or  1 or 0
+
+we mark it as the source prime number

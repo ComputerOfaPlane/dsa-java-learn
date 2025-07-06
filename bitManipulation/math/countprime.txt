@@ -1,0 +1,6 @@
+use sieve to find all the prime and mark it on a number line using sieve
+
+then use prefix sums to assign all the cells of sieve some valuse
+
+
+we reduce the query TC = O(1)

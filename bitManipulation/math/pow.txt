@@ -1,0 +1,9 @@
+if you want to find power of a number suppose
+
+2 ** 10
+
+it can be written as (2^2)**(10/2)
+
+the power gets odd so we multiply the base to answer once
+
+and so on, for more details check explanation of it in binary search and recursion

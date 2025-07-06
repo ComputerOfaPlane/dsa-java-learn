@@ -1,0 +1,12 @@
+a prime number have only two divisors 1 and the number itself
+
+brute force will be run a loop from 1 to n
+
+count all the divisors, if there exists more than two divisors, return as false;
+
+else return as true;
+
+we can optimise it further by using the same observations we got in finding the divisors in sqrt(n) time
+
+if we get a number between 2 and sqrt(n) that divides n we return false
+else return true;

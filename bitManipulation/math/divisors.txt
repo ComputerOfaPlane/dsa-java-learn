@@ -1,0 +1,26 @@
+given a number find all the divisors of the number
+
+suppose a number = 60
+
+divisors are = 1, 2, 3, 5, 6, 10, 12, 20, 30, 60
+
+we need to print these
+
+brute force way will be running a loop from 1 to 60
+then for each i check if n%i==0
+
+we can optimise this by observind
+
+dvisiors are:
+
+1 x 60
+2 x 30
+3 x 20
+5 x 12
+6 x 10
+
+we get both of the divisors in the form 
+
+i x n/i
+
+i will got upto sqrt(n)
