@@ -1,0 +1,20 @@
+4 patterns:
+
+1. constant window of some size
+    -> populate the window, then remove one from left and add one to right
+
+2. longest subarray/substring where <condition>
+left=0, right=0
+while(right<n){
+    // add the right element to the window
+    while(condition not holding true) {
+        shrik the window
+    }
+    right += 1
+}
+
+3. no. of subarrays/substrings where <condition>
+    same template but 
+
+4. shortest subarray/substring where <condition>
+    similar to (2) just in shrink step, shrink the window to maximum possible situation

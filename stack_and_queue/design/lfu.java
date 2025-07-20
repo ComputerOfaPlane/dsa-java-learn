@@ -46,7 +46,14 @@ class LFUCache {
     }
 
     public void update(Node node){
-
+        int curr = node.count;
+        DoublyLinkedList list = freq.get(curr);
+        list.deleteNode(node);
+        if(curr==minf && list.size==0) minf+=1;
+        node.count+=1;
+        DoublyLinkedList newlist = freq.getOrDefault(node.count, new DoublyLinkedList());
+        newlist.addNode(node);
+        freq.put(node.count,newlist);
     }
 }
 
