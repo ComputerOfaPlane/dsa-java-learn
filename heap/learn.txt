@@ -1,0 +1,1 @@
+retrieval of minimum and maximum elements is possible in O(1) time
