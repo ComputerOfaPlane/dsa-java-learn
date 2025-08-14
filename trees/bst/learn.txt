@@ -1,0 +1,17 @@
+A binary search tree is a special type of binary tree in which nodes are arranged in a specific order
+
+given a node, its left child will be smaller than it,
+given a node its right child will be smaller than it
+
+all the values in the left sub tree will always be smaller
+all the values in the right sub tree will always be bigger
+
+generally same values are not allowed, but
+
+we can mitiage around this by either doing left<=root<right or left<root<=right
+or just store the frequency as another parameter in the node
+
+since it is a binary search tree, inorder traversal will be a sorted list
+
+smallest element of a bst tree will be the leftmost leaf
+largest element will be the rightmost leaf

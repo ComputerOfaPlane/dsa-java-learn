@@ -1,0 +1,2 @@
+bfs - levelorder
+dfs - preorder, inorder, postorder
